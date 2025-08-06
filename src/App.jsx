@@ -4,6 +4,7 @@ import { MyRoutes } from "./routes/routes";
 import { createContext, useState } from "react";
 import { Light, Dark } from "./styles/themes";
 import { Device } from "./styles/breackpoints";
+import Sidebar from "./components/organismos/sidebar/Sidebar";
 export const ThemeContext = createContext(null);
 function App() {
   const [themeuse, setTheme] = useState("dark");
@@ -17,7 +18,12 @@ function App() {
         <ThemeProvider theme={themeStyle}>
           <AuthContextProvider>
             <Container className={sidebarOpen ? "active" : " "}>
-              <section className="ContentSidebar">Sidebar</section>
+              <section className="ContentSidebar">
+                <Sidebar
+                  state={sidebarOpen}
+                  setState={() => setSidebarOpen(!sidebarOpen)}
+                />
+              </section>
               <section className="ContentMenuambur">Menu amburguesa</section>
               <section className="ContentRoutes">
                 <MyRoutes />
