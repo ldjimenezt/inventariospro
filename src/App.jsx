@@ -4,7 +4,7 @@ import { MyRoutes } from "./routes/routes";
 import { createContext, useState } from "react";
 import { Light, Dark } from "./styles/themes";
 import { Device } from "./styles/breackpoints";
-import Sidebar from "./components/organismos/sidebar/Sidebar";
+import {Sidebar} from "./components/organismos/sidebar/Sidebar";
 export const ThemeContext = createContext(null);
 function App() {
   const [themeuse, setTheme] = useState("dark");
