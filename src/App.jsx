@@ -5,6 +5,7 @@ import { createContext, useState } from "react";
 import { Light, Dark } from "./styles/themes";
 import { Device } from "./styles/breackpoints";
 import {Sidebar} from "./components/organismos/sidebar/Sidebar";
+import { MenuHambur } from "./components/organismos/Menuhambur";
 export const ThemeContext = createContext(null);
 function App() {
   const [themeuse, setTheme] = useState("dark");
@@ -24,7 +25,7 @@ function App() {
                   setState={() => setSidebarOpen(!sidebarOpen)}
                 />
               </section>
-              <section className="ContentMenuambur">Menu amburguesa</section>
+              <section className="ContentMenuambur"><MenuHambur /> </section>
               <section className="ContentRoutes">
                 <MyRoutes />
               </section>
